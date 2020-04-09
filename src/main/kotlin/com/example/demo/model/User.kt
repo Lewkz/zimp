@@ -3,22 +3,17 @@ package com.example.demo.model
 import java.time.Instant
 import javax.persistence.*
 
+const val userFields = "id, first_name, last_name, email, created_at, updated_at"
+
 @Entity
 @Table(name = "users")
-data class User(
-
+class User(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
-
-        @Column(nullable = false)
         val firstName: String,
-
-        @Column(nullable = false)
         val lastName: String,
-
-        @Column(nullable = false)
-        val email: String
-
-        //val createdAt: Instant = Instant.now()
+        val email: String,
+        var createdAt: Instant,
+        var updatedAt: Instant
 )

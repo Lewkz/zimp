@@ -8,7 +8,7 @@ spring:
       ddl-auto: "update"
       show-sql: "true"
   datasource:
-    url: "jdbc:postgresql://localhost:5432/my_db"
+    url: "jdbc:postgresql://localhost:5432/my_database"
     username: "postgres"
     password: "root"
     initialization-mode: "always"
